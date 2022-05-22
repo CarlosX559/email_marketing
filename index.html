@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Pevonia</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: Georgia;
+            src: local(Georgia), url(./fonts/Georgia.ttf);
+        }
+        .align_button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: #f6f9fc;
+        }
+
+        .container {
+            width: 100%;
+            table-layout: fixed;
+
+        }
+
+        .webkit {
+            display: flex;
+            max-width: 600px;
+            width: 100%;
+            background-color: #fff;
+            flex-direction: column;
+            align-items: center;
+            Margin: 0 auto;
+            border-spacing: 0;
+        }
+
+        .outer {
+            Margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            border-spacing: 0;
+        }
+
+        header {
+            width: 100%;
+
+        }
+
+        .shop_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+
+        }
+
+        .shop_header ul li {
+            list-style: none;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            padding: 0px 20px;
+            text-align: center;
+        }
+
+        .shop_header ul li a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .shop p {
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            padding: 0px 20px;
+            text-align: center;
+        }
+
+        .shop p a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .background {
+            display: flex;
+            justify-content: center;
+            height: 1000px;
+            width: 100%;
+            background-color: #F0EDE8;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo_pevonia img {
+            width: 100%;
+            height: auto;
+        }
+
+        .pevonia_product {
+            padding: 0px 20px;
+        }
+
+        .pevonia_product img {
+            max-width: 352px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .title_power {
+            padding: 0px 20px;
+        }
+
+        .title_power h2 {
+            color: #000;
+            font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            font-size: 46px;
+            font-weight: 200;
+        }
+
+        .sub_title_power {
+            padding: 0px 20px;
+        }
+
+        .sub_title_power p {
+            font-family: 'Lato';
+            max-width: 340px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            margin: 0px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+
+        .button {
+            height: 60px;
+            width: 155px;
+            background-image: linear-gradient(to right, #92C0CD, #C2E0E2);
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .button_2 {
+            height: 60px;
+            width: 155px;
+            background-image: linear-gradient(to right, #92C0CD, #C2E0E2);
+            cursor: pointer;
+            border-radius: 2px;
+
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            line-height: 60px;
+            color: #fff;
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .title_solution {
+            padding: 0px 20px;
+        }
+
+        .title_solution h2 {
+            margin-top: 90px;
+            font-size: 46px;
+            max-width: 500px;
+            width: 100%;
+            font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+            font-weight: 500;
+            text-align: center;
+        }
+
+        #modal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 910px;
+        }
+
+        .container_modal {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 500px;
+            width: 100%;
+
+        }
+
+
+        .modal_1,
+        .modal_2,
+        .modal_3,
+        .modal_4,
+        .modal_5,
+        .modal_6 {
+            width: 232px;
+            height: 188px;
+            background-color: #F0EDE8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .align_modal {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 300;
+            font-size: 16px;
+            font-style: normal;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .align_modal p {
+            max-width: 100px;
+            width: 100%;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 23px;
+        }
+
+        .align_modal p a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .line {
+            max-width: 94px !important;
+        }
+
+        #gifts {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container_gifts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .title_gift {
+            padding: 0px 20px;
+        }
+
+        .title_gift h2 {
+            font-size: 46px;
+            text-align: center;
+            font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+            max-width: 500px;
+            width: 100%;
+            font-weight: 200;
+            margin: 0px;
+            margin-bottom: 20px;
+            margin-top: 80px;
+        }
+
+        .sub_title_gift p {
+            text-align: center;
+            margin: 0px;
+            margin-bottom: 8px;
+            padding: 0px 20px;
+            font-family: 'Lato', 'Nunito';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+
+        }
+
+        .background_exfoliator {
+            width: 100%;
+            height: 900px;
+            background-color: #F0EDE8;
+            margin-top: 100px;
+        }
+
+        .title_exfoliator {
+            padding: 0px 20px;
+        }
+
+        .title_exfoliator h2 {
+            font-size: 44px;
+            text-align: center;
+            font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+            max-width: 540px;
+            width: 100%;
+            font-weight: 200;
+            margin: 0px;
+            margin-bottom: 20px;
+            margin-top: 94px;
+        }
+
+        .sub_title_exfoliator {
+            padding: 0px 20px;
+        }
+
+        .sub_title_exfoliator p {
+            margin: 0px;
+            margin-bottom: 6px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Lato';
+        }
+
+        .center_exfoliator {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+
+        }
+
+        .area_ligne {
+            display: flex;
+            max-width: 500px;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            border: 1.2px solid #000;
+        }
+
+        .circle p {
+            margin: 0px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 13px;
+            font-family: 'Lato';
+            font-weight: 400;
+
+        }
+
+        .align_img img {
+            margin-bottom: 20px;
+        }
+
+        .align_img p {
+            margin: 0px;
+            text-align: center;
+            margin-bottom: 8px;
+            font-family: 'Lato';
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .align_img p a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .container_skincare {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            padding: 0px 20px;
+            margin-top: 40px;
+        }
+
+        .title_trusted h2 {
+            font-size: 35px;
+            text-align: center;
+            font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+            max-width: 540px;
+            width: 100%;
+            font-weight: 200;
+            margin: 0px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .sub_title_trusted {
+            padding: 0px 20px;
+        }
+
+        .sub_title_trusted p {
+            margin: 0px;
+            text-align: center;
+            margin-bottom: 8px;
+            font-family: 'Lato';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            max-width: 470px;
+        }
+
+        .sup {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin: 0px;
+            margin-top: 40px;
+            border-bottom: 1px solid #000;
+            line-height: 25px;
+        }
+
+        .sup a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        footer {
+            height: 410px;
+            max-width: 600px;
+            width: 100%;
+            background-color: #F0EDE8;
+            margin-top: 100px;
+        }
+
+        .container_footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        .texts_footer {
+            display: flex;
+            margin-top: 40px;
+            max-width: 368px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .texts_footer p {
+            font-family: 'Montserrat';
+            font-size: 13px;
+            font-weight: 500;
+            margin: 0px;
+        }
+
+        .texts_footer p a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .line_footer {
+            width: 100%;
+            border: 1px solid #CCCCCC;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .texts_dollars {
+            max-width: 490px;
+            width: 100%;
+        }
+
+        .texts_dollars p {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 23px;
+            color: #9E9B96;
+            padding: 0px 20px;
+            /*ultima alteração*/
+        }
+
+        .texts_copy {
+            max-width: 320px;
+            width: 100%;
+        }
+
+        .texts_copy p {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 23px;
+            color: #393631;
+            padding: 0px 20px;
+            margin: 0px;
+            margin-bottom: 20px;
+        }
+
+        .texts_click {
+            max-width: 480px;
+            width: 100%;
+        }
+
+        .texts_click p {
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 23px;
+            color: #393631;
+            padding: 0px 20px;
+            margin: 0px;
+            margin-top: 20px;
+        }
+
+        .texts_click a {
+            color: #393631;
+        }
+
+        /*Area modal*/
+        @media(max-width:525px) {
+            .container_modal {
+                display: grid;
+                height: 1650px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .align_modal {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 458px;
+            }
+
+            #modal {
+                max-width: 458px;
+                width: 100%;
+                height: 1650px;
+            }
+
+            .pevonia_rose {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .pevonia_rose img {
+                max-width: 420px;
+                width: 100%;
+            }
+
+            .area_ligne {
+                flex-direction: column;
+            }
+
+            .circle {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .background_exfoliator {
+                height: 1490px;
+            }
+        }
+
+        @media(max-width:430px) {
+            footer {
+                height: 440px;
+            }
+
+            .texts_footer {
+                max-width: 315px;
+            }
+        }
+
+        @media(max-width:433px) {
+            .background {
+                height: 990px;
+            }
+        }
+
+        @media(max-width:418px) {
+            .shop p {
+                font-size: 12px;
+            }
+
+            .shop_header ul li {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width:402px) {
+            .background_exfoliator {
+                height: 1500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="webkit">
+            <table class="outer">
+                <tr>
+                    <td style=" display: flex; align-items: center; justify-content: space-between;">
+                        <header>
+                            <div class="shop_header">
+                                <div class="shop">
+                                    <p><a href="#">Shop Online</a></p>
+                                </div>
+                                <ul>
+                                    <li><a href="#"> Find a Store </a> . <a href="#"> 1-800-MY-PEVONIA </a></li>
+                                </ul>
+                            </div>
+                        </header>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style=" display: flex; align-items: center; flex-direction: column;">
+
+                        <div class="background">
+                            <div class="logo_pevonia">
+                                <img src="img/pevonia.png" alt="Pevonia" />
+                            </div>
+                            <div class="pevonia_product">
+                                <img src="img/pevonia_power.png" />
+                            </div>
+
+                            <div class="title_power">
+                                <h2> Pevonia Power Repair Age Correction Firming Marine Elastin Cream, 1.7 oz </h2>
+                            </div>
+                            <div class="sub_title_power">
+                                <p>Firm, tighten, repair and prevent loose/sagging skin, moisturize and protect the skin
+                                </p>
+                            </div>
+                            <a class="link" style="margin-top:40px;" href="#">
+                                <div class="button">
+                                    BUY NOW
+                                </div>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="100%" style=" display: flex; align-items: center; flex-direction: column;">
+                        <div class="title_solution">
+                            <h2>Find a Solution for these Top Concerns</h2>
+                        </div>
+                        <section id="modal">
+                            <div class="container_modal">
+                                <div class="align_modal">
+                                    <div class="modal_1">
+                                        <img src="img/rosto_1.png" />
+                                    </div>
+                                    <p> <a href="#">Aging Prevention</a> </p>
+                                </div>
+                                <div class="align_modal">
+                                    <div class="modal_2">
+                                        <img src="img/rosto_2.png" />
+                                    </div>
+                                    <p> <a href="#">lines & wrinkles</a></p>
+                                </div>
+                                <div class="align_modal">
+                                    <div class="modal_3">
+                                        <img src="img/rosto_3.png" />
+                                    </div>
+                                    <p> <a href="#"> sensitive skin </a></p>
+                                </div>
+                                <div class="align_modal">
+                                    <div class="modal_4">
+                                        <img src="img/damage.png" />
+                                    </div>
+                                    <p> <a href="#">sun damage</a> </p>
+                                </div>
+                                <div class="align_modal">
+                                    <div class="modal_5">
+                                        <img src="img/rosto_5.png" />
+                                    </div>
+                                    <p class="line"><a href="#"> rosacea & redness</a> </p>
+                                </div>
+
+                                <div class="align_modal">
+                                    <div class="modal_6">
+                                        <img src="img/prevention.png" />
+                                    </div>
+                                    <p> <a href="#">prevention </a></p>
+                                </div>
+                                <div class="align_button">
+                                    <a class="link" style="margin-top:40px;" href="#">
+                                        <div class="button_2">
+                                            BUY NOW
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </section>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" style=" display: flex; align-items: center; flex-direction: column;">
+                        <section id="gifts">
+                            <div class="container_gifts">
+                                <div class="background_exfoliator">
+                                    <div class="title_exfoliator">
+                                        <h2>Spend $55, add a full-size exfoliator, your choice.</h2>
+                                    </div>
+                                    <div class="sub_title_exfoliator">
+                                        <p>Smooth your way to more vibrant skin.</p>
+                                        <p>8 Pieces a $119.00 total value.</p>
+                                    </div>
+                                    <div class="center_exfoliator">
+                                        <div class="area_ligne">
+                                            <div class="align_img">
+                                                <img src="img/pevonia_ligne.png" />
+                                                <p> <a href="#"> Solution </a> </p>
+                                                <p> <a href="#"> Rosacea </a></p>
+                                                <p> <a href="#"> Skin </a> </p>
+                                            </div>
+                                            <div class="circle">
+                                                <p>OR</p>
+                                            </div>
+                                            <div class="align_img">
+                                                <img src="img/pevonia_ligne_2.png" />
+                                                <p> <a href="#"> Solution </a></p>
+                                                <p> <a href="#"> Sensitive</a> </p>
+                                                <p><a href="#"> Skin</a> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                <tr>
+                    <td width="100%" style=" display: flex; align-items: center; flex-direction: column;">
+                        <div class="title_gift">
+                            <h2>Create a Gift You'll Love</h2>
+                        </div>
+                        <div class="sub_title_gift" style="z-index:999;">
+                            <p>Start with 7 Must-Haves.</p>
+                            <p>Free with any $31 order.* A $95 value.</p>
+                            <p>Gifts includes a full-size moisturizer, your choice.</p>
+                        </div>
+                        <div class="pevonia_rose">
+                            <a href="#"> <img src="img/pevonia_rose_1.png" style="margin-top: -40px;"
+                                    alt="Pevonia Rose" /> </a>
+                        </div>
+                    </td>
+                </tr>
+        </div>
+
+        </section>
+        </td>
+        </tr>
+        <tr>
+            <td width="100%" style=" display: flex; align-items: center; flex-direction: column;">
+                <section>
+                    <div class="container_skincare">
+                        <img src="img/products.png" max-width="503px" width="100%" />
+
+                        <div class="title_trusted">
+                            <h2> Natural and organic ingredients </h2>
+                        </div>
+                        <div class="sub_title_trusted">
+                            <p> We sustainably source the most
+                                effective, safe, natural ingredients to ensure optimal,
+                                clinical results. </p>
+                        </div>
+                        <p class="sup"><a href="#">our products</a></p>
+                    </div>
+
+                </section>
+            </td>
+        </tr>
+        <tr>
+            <td width="100%" style=" display: flex; align-items: center; flex-direction: column;">
+                <footer>
+                    <div class="container_footer">
+                        <div class="texts_footer">
+                            <p><a href="#"> Shop Online </a></p>
+                            <p>/</p>
+                            <p><a href="#"> Find a Store </a></p>
+                            <p>/</p>
+                            <p><a href="#"> 1-800-MY-PEVONIA </a></p>
+                        </div>
+                        <div class="line_footer"></div>
+
+                        <div class="texts_dollars">
+                            <p>Prices are as of May 21,
+                                2021, do not include taxes os shipping, are subject
+                                to change, and are listed in U.S. Dollars.</p>
+                        </div>
+                        <div class="texts_copy">
+                            <p>TM and CopyRight © 2021, Pevonia 150 King St W, Toronto, ON M5H 1J9, Canada</p>
+                        </div>
+                        <img src="img/pevonia.png" />
+                        <div class="texts_click">
+                            <p>If you prefer not to receive commercial email from Pevonia,
+                                or if you’ve changed your email address, please <a href="#">click here</a>.</p>
+                        </div>
+                    </div>
+
+                </footer>
+            </td>
+        </tr>
+        </table>
+    </div>
+    </div>
+
+</body>
+
+
+</html>
